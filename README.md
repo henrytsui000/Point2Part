@@ -1,67 +1,115 @@
 <div align="center">
 
-<h1>Point2Part</h1>
+# Point2Part
 
-<h3>Unified 3D Partitioning from Point Prompts</h3>
+### Unified 3D Partitioning from Point Prompts
 
-<p>
-  <a href="https://henrytsui000.github.io/mypage/">Hao-Tang Tsui</a> &nbsp;·&nbsp;
-  <a href="https://lucytuan.github.io/">Yu-Rou Tuan</a> &nbsp;·&nbsp;
-  <a href="https://shirleymaxx.github.io/">Xiaoxuan Ma</a> &nbsp;·&nbsp;
-  <a href="https://nicolasugrinovic.github.io/">Nicolás Ugrinovic</a> &nbsp;·&nbsp;
-  <a href="https://sites.google.com/view/takaaki-shiratori/home">Takaaki Shiratori</a> &nbsp;·&nbsp;
-  <a href="https://kriskitani.github.io/">Kris Kitani</a>
+**[Hao-Tang Tsui](https://henrytsui000.github.io/mypage/)** ·
+**[Yu-Rou Tuan](https://lucytuan.github.io/)** ·
+**[Xiaoxuan Ma](https://shirleymaxx.github.io/)** ·
+**[Nicolás Ugrinovic](https://nicolasugrinovic.github.io/)** ·
+**[Takaaki Shiratori](https://sites.google.com/view/takaaki-shiratori/home)** ·
+**[Kris Kitani](https://kriskitani.github.io/)**
+
+Carnegie Mellon University
+
+<br>
+
+[![Project Page](https://img.shields.io/badge/Project-Page-1f6feb)](https://henrytsui000.github.io/Point2Part/)
+[![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/)
+[![Code](https://img.shields.io/badge/Code-Coming%20Soon-lightgrey)](#code--models)
+
+</div>
+
+<br>
+
+<p align="center">
+  <img src="assets/teaser.png" width="100%">
 </p>
 
-<p><b>Carnegie Mellon University</b></p>
+<div align="center">
 
-<p>
-  <a href="https://arxiv.org/"><img src="https://img.shields.io/badge/arXiv-Point2Part-b31b1b?style=flat-square&logo=arxiv&logoColor=white" alt="arXiv"></a>
-  <a href="https://henrytsui000.github.io/Point2Part/"><img src="https://img.shields.io/badge/Project-Page-1f6feb?style=flat-square&logo=googlechrome&logoColor=white" alt="Project Page"></a>
-  <a href="https://github.com/henrytsui000/Point2Part"><img src="https://img.shields.io/badge/Code-Point2Part-24292f?style=flat-square&logo=github&logoColor=white" alt="Code"></a>
-</p>
+### Point to the parts you want.
 
-<img src="media/hero.gif" width="88%" alt="One point prompt per part; the parts come out exclusive and exhaustive">
+**Point2Part** formulates 3D part decomposition as a **partition of the whole**:
+users specify the desired parts with 3D point prompts, and the model jointly
+decomposes the entire shape among them.
 
-<table>
-<tr>
-<td width="50%"><img src="media/controllable.gif" width="100%" alt="The same shape at different part counts"></td>
-<td width="50%"><img src="media/segmentation.gif" width="100%" alt="Per-face segmentation in 0.3 seconds"></td>
-</tr>
-<tr>
-<td align="center"><b>You choose how many parts</b></td>
-<td align="center"><b>Per-face labels in 0.3 s</b></td>
-</tr>
-</table>
+<br>
+
+**Image → Parts** &nbsp;&nbsp;·&nbsp;&nbsp;
+**Mesh → Parts** &nbsp;&nbsp;·&nbsp;&nbsp;
+**Mesh → Segmentation**
 
 </div>
 
 ---
 
-> **TL;DR** &nbsp; Point at the parts you want. Point2Part returns them as a partition of
-> the whole shape with no overlaps, no gaps.
+## Overview
 
-Decomposition is solved jointly instead of one part at a time, so the output is
-- **exclusive**: distinct parts have no volume overlap
-- **exhaustive**: their union recovers the entire object. Both hold by construction.
+- **Point-prompted control**  
+  Directly specify the desired decomposition with 3D point prompts.
 
-One model covers three settings with no retraining: generating closed parts from a single
-image, generating closed parts from a mesh, and labelling the faces of a mesh. Point
-prompts are what you control, so the same shape can be split into as many or as few parts
-as you want.
+- **Partition of the whole**  
+  Parts are predicted jointly rather than independently, producing a complete and
+  mutually exclusive decomposition by construction.
 
-## 📢 News
+- **One model, three tasks**  
+  Point2Part handles image-to-part generation, mesh-to-part generation, and mesh
+  part segmentation within the same framework.
 
-- **[2026-09]** Project page and interactive gallery are live.
+- **Strong part quality and compatibility**  
+  Point2Part achieves state-of-the-art part quality while reducing inter-part
+  penetration by more than an order of magnitude.
 
-## 📋 TODO
+---
 
-- [x] Project Page
-- [ ] Part Segmentation Inference
-- [ ] Part Generation Inference
-- [ ] Part Generation Training Code
+## Controllable Decomposition
 
-## 📚 Citation
+Point2Part lets users control the
+desired granularity simply by specifying point prompts.
+
+<p align="center">
+  <img src="assets/controllable.gif" width="92%">
+</p>
+
+---
+
+## Unified Tasks
+
+<p align="center">
+  <img src="assets/unified_tasks.gif" width="92%">
+</p>
+
+---
+
+## Code & Models
+
+Planned release:
+
+- [ ] Pretrained checkpoints
+- [ ] Mesh → Parts inference
+- [ ] Image → Parts inference
+- [ ] Mesh segmentation inference
+- [ ] Evaluation scripts
+- [ ] Training code
+
+⭐ Star the repository to follow future releases.
+
+---
+
+## Acknowledgements
+
+This work builds on [Hunyuan3D 2.1](https://github.com/Tencent-Hunyuan/Hunyuan3D-2.1),
+[TripoSG](https://github.com/VAST-AI-Research/TripoSG) and
+[HY3D-Bench](https://github.com/Tencent-Hunyuan/HY3D-Bench). We thank the authors for
+releasing their work.
+
+---
+
+## Citation
+
+If you find Point2Part useful, please consider citing:
 
 ```bibtex
 @article{tsui2026point2part,

@@ -153,6 +153,7 @@ nav.over-light{color:var(--t0);background:var(--navbg);
 .act.solid:hover{background:rgba(255,255,255,.88)}
 .act[aria-disabled=true]{opacity:.38;pointer-events:none}
 .act svg{width:15px;height:15px;fill:none;stroke:currentColor;stroke-width:1.9}
+.act svg.glyph{fill:currentColor;stroke:none}
 .scroll-cue{position:absolute;left:50%;bottom:22px;transform:translateX(-50%);z-index:2;
             width:22px;height:34px;border:1px solid rgba(255,255,255,.35);border-radius:12px}
 .scroll-cue::after{content:"";position:absolute;left:50%;top:7px;width:3px;height:6px;border-radius:2px;
@@ -469,8 +470,8 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
 
 <header class="hero dark" id="top">
   <div class="frame" id="frame">
-    <video autoplay muted loop playsinline preload="metadata" poster="assets/video/cover_poster.jpg?v=c1">
-      <source src="assets/video/cover.mp4?v=c1" type="video/mp4">
+    <video autoplay muted loop playsinline preload="metadata" poster="assets/video/cover_poster.jpg?v=c2">
+      <source src="assets/video/cover.mp4?v=c2" type="video/mp4">
     </video>
     <span class="scroll-cue" aria-hidden="true"></span>
     <div class="titleover">
@@ -489,11 +490,11 @@ footer .wrap{display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
       <a class="act solid" href="#parts">
         <svg viewBox="0 0 24 24"><path d="M12 3l8 4.5v9L12 21l-8-4.5v-9z"/><path d="M12 12l8-4.5M12 12v9M12 12L4 7.5"/></svg>Explore parts</a>
       <a class="act" href="https://arxiv.org/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M6 2h8l5 5v15H6z"/><path d="M14 2v6h5"/><path d="M9 13h7M9 17h7"/></svg>Paper</a>
-      <a class="act" href="https://arxiv.org/" target="_blank" rel="noopener">
-        <svg viewBox="0 0 24 24"><path d="M12 3v14"/><path d="M6 11l6 6 6-6"/><path d="M4 21h16"/></svg>arXiv</a>
+        <svg class="glyph" viewBox="0 0 448 512"><g transform="matrix(1.55,0,0,-1.55,-123.19936,553.59966)"><path d="m 119.65,351.996 c -5.84961,0.13477 -11.1943,-3.29883 -13.502,-8.67578 -2.19629,-5.27051 -0.61914,-8.9668 4.19727,-15.8652 7.05469,-10.3799 78.8242,-96.5625 78.8242,-96.5625 l -15.8828,-14.8633 c -13.3809,-13.3779 -13.9561,-31.333 -1.50977,-43.7754 l 18.4922,-17.6133 -51.5977,-63.377 c -4.00586,-4.26758 -6.48535,-11.7559 -4.24805,-17.1309 2.27832,-5.53613 7.69727,-9.12891 13.6836,-9.07031 3.83398,0.0957 7.43262,1.87402 9.83789,4.86133 l 61.3691,57.0566 94.5762,-90.0703 c 3.19434,-3.08398 7.44336,-4.83984 11.8828,-4.91016 1.60449,0.0039 3.19824,0.245117 4.73242,0.714844 5.7793,1.80566 10.249,6.41797 11.8711,12.252 1.2998,5.47363 -0.27637,11.2334 -4.18164,15.2832 l -83.0859,100.011996 14.8789,13.834 c 11.0957,10.0029 11.1543,27.3906 0.12695,37.4688 l -16.2949,15.6309 56.2559,66.4434 0.0742,0.0859 0.0664,0.0899 c 5.02734,6.53125 7.43164,11.5615 4.83984,17.9395 -3.13379,5.96875 -8.69727,10.29 -15.2559,11.8516 -0.67676,0.0908 -1.35938,0.13574 -2.04297,0.13671 l -0.004,-0.0117 c -4.42871,-0.27051 -8.61035,-2.13086 -11.7754,-5.24023 l -0.13086,-0.10743 -0.12304,-0.11132 -65.207,-59.127 -89.8965,86.2402 c 0,0 -5.33398,6.47754 -10.9707,6.61133 z m 178.104,-33.041 c 0.47852,-0.002 0.95703,-0.0332 1.43164,-0.0957 4.84277,-1.33301 8.95605,-4.54004 11.4316,-8.91016 1.44922,-3.5625 1.00293,-6.45703 -4.19727,-13.2148 l -56.0586,-66.2188 -26.375,25.3027 64.9551,58.9062 c 2.33887,2.41504 5.46484,3.91113 8.8125,4.2168 z M 192.436,227.402 334.446,57.244 c 2.78711,-3.48926 4.5293,-6.97949 3.3418,-10.9121 -1.16113,-4.30273 -4.43457,-7.71777 -8.68555,-9.05664 -1.08105,-0.333984 -2.20508,-0.503906 -3.33594,-0.505859 -3.20801,0.07617 -6.26953,1.35645 -8.57617,3.58789 l -142.033,135.284999 c -11.1719,11.1719 -9.48242,26.0195 1.39258,36.8945 z"/></g></svg>arXiv</a>
       <a class="act" href="https://github.com/henrytsui000/Point2Part" target="_blank" rel="noopener">
         <svg viewBox="0 0 24 24"><path d="M9 18l-6-6 6-6"/><path d="M15 6l6 6-6 6"/></svg>Code</a>
+      <a class="act" href="#cite">
+        <svg viewBox="0 0 24 24"><path d="M9.5 3C7.8 3 7.3 3.9 7.3 5.7v2.1c0 1.5-.7 2.4-1.9 2.9 1.2.5 1.9 1.4 1.9 2.9v2.7c0 1.8.5 2.7 2.2 2.7"/><path d="M14.5 3c1.7 0 2.2.9 2.2 2.7v2.1c0 1.5.7 2.4 1.9 2.9-1.2.5-1.9 1.4-1.9 2.9v2.7c0 1.8-.5 2.7-2.2 2.7"/></svg>BibTeX</a>
       </div>
       </div>
     </div>
