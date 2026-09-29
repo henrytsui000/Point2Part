@@ -17,8 +17,8 @@
 
 <p>
   <a href="https://arxiv.org/"><img src="https://img.shields.io/badge/arXiv-Point2Part-b31b1b?style=flat-square&logo=arxiv&logoColor=white" alt="arXiv"></a>
-  <a href="https://github.com/"><img src="https://img.shields.io/badge/Project-Page-1f6feb?style=flat-square&logo=googlechrome&logoColor=white" alt="Project Page"></a>
-  <a href="https://github.com/"><img src="https://img.shields.io/badge/Code-Point2Part-24292f?style=flat-square&logo=github&logoColor=white" alt="Code"></a>
+  <a href="https://henrytsui000.github.io/Point2Part/"><img src="https://img.shields.io/badge/Project-Page-1f6feb?style=flat-square&logo=googlechrome&logoColor=white" alt="Project Page"></a>
+  <a href="https://github.com/henrytsui000/Point2Part"><img src="https://img.shields.io/badge/Code-Point2Part-24292f?style=flat-square&logo=github&logoColor=white" alt="Code"></a>
 </p>
 
 <img src="media/hero.gif" width="88%" alt="One point prompt per part; the parts come out exclusive and exhaustive">
