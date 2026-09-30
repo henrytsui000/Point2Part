@@ -16,7 +16,7 @@ Carnegie Mellon University
 <br>
 
 [![Project Page](https://img.shields.io/badge/Project-Page-1f6feb)](https://henrytsui000.github.io/Point2Part/)
-[![arXiv](https://img.shields.io/badge/arXiv-Paper-b31b1b.svg)](https://arxiv.org/)
+[![arXiv](https://img.shields.io/badge/arXiv-2609.38180-b31b1b.svg)](https://arxiv.org/abs/2609.38180)
 [![Code](https://img.shields.io/badge/Code-Coming%20Soon-lightgrey)](#code--models)
 
 </div>
@@ -116,7 +116,7 @@ If you find Point2Part useful, please consider citing:
   title   = {Point2Part: Unified 3D Partitioning from Point Prompts},
   author  = {Tsui, Hao-Tang and Tuan, Yu-Rou and Ma, Xiaoxuan and
              Ugrinovic, Nicol{\'a}s and Shiratori, Takaaki and Kitani, Kris},
-  journal = {arXiv preprint arXiv:XXXX.XXXXX},
+  journal = {arXiv preprint arXiv:2609.38180},
   year    = {2026}
 }
 ```
